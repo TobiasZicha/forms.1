@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrace</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            width: 320px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <!--moje krásná stylizace-->
+
+</head>
+<body>
+<form>
+    <h2>Registrace</h2>
+
+    <label for="jmeno">Celé jméno:</label>
+    <input type="text" id="jmeno" name="jmeno" required maxlength="50" placeholder="Tobias Zicha">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="neco@gmail.com">
+
+    <label for="den">Oblíbený den:</label>
+    <select id="den" name="den" required>
+        <optgroup label="Všední dny">
+            <option value="Pondělí">Pondělí</option>
+            <option value="Úterý">Úterý</option>
+            <option value="Středa">Středa</option>
+            <option value="Čtvrtek">Čtvrtek</option>
+            <option value="Pátek">Pátek</option>
+        </optgroup>
+        <optgroup label="Víkendové dny">
+            <option value="Sobota">Sobota</option>
+            <option value="Neděle">Neděle</option>
+        </optgroup>
+    </select>
+
+    <label for="heslo">Heslo:</label>
+    <input type="password" id="heslo" name="heslo" required minlength="8" placeholder="Zadejte heslo">
+
+    <label for="potvrzeni_hesla">Opakujte heslo:</label>
+    <input type="password" id="potvrzeni_hesla" name="potvrzeni_hesla" required minlength="8" placeholder="Zadejte heslo znovu">
+
+    <label for="vek">Věk:</label>
+    <input type="number" id="vek" name="vek" min="0" max="128" placeholder="0 - 128 let">
+
+    <label for="barva">Oblíbená barva:</label>
+    <input type="color" id="barva" name="barva">
+
+    <label for="terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        Souhlasím s podmínkami
+    </label>
+
+    <button type="submit">Sign Up</button>
+
+    <a href="#">Login</a>
+</form>
+<!--Krásný úkol pane učiteli.-->
+</body>
+
+</html>
+
